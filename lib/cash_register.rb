@@ -18,7 +18,7 @@ class CashRegister
       @total += price
       quantity.times do @items << title
       @last_price = price
-    end
+      end
     else
       @total += price
       @items << title
@@ -32,6 +32,7 @@ class CashRegister
       return "After the discount, the total comes to $#{@total}."
     else
       return "There is no discount to apply."
+    end
   end
   
   def items
@@ -42,4 +43,4 @@ class CashRegister
     @total = @total - @last_price
   end
 end
-end
+
